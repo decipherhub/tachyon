@@ -79,6 +79,11 @@ tachyon_cc_library(
 )
 
 tachyon_cc_library(
+    name = "number_theory",
+    hdrs = ["number_theory.h"],
+)
+
+tachyon_cc_library(
     name = "rational_field",
     hdrs = ["rational_field.h"],
     deps = [
@@ -158,6 +163,7 @@ tachyon_cc_unittest(
         "egcd_unittest.cc",
         "field_unittest.cc",
         "groups_unittest.cc",
+        "number_theory_unittest.cc",
         "rational_field_unittest.cc",
         "semigroups_unittest.cc",
         "sign_unittest.cc",
@@ -168,6 +174,7 @@ tachyon_cc_unittest(
         ":bit_iterator",
         ":egcd",
         ":groups",
+        ":number_theory",
         ":rational_field",
         ":sign",
         ":simd_int",
